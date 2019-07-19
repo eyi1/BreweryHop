@@ -1,7 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
-
+import BreweryContainer from './containers/BreweryContainer'
 //import axios from 'axios';
 //const API_URL = 'https://api.openbrewerydb.org/breweries';
 
@@ -27,7 +27,7 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
-        <header className="App-header">
+        {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
@@ -42,8 +42,12 @@ class App extends React.Component {
           Click here to begin...
           Welcome to BreweryHop: 
           Planning a visit to NYC? Check out some of the best breweries here! 
-        </header>
+        </header> */}
+
+          <BreweryContainer />
+
       </div>
+      
     );
   }
 }
