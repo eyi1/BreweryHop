@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import BreweryList from './BreweryList';
+import BreweryList from '../components/BreweryList';
 const API_URL = 'https://api.openbrewerydb.org/breweries?by_city=Brooklyn';
 
 
@@ -29,9 +29,8 @@ export default class BreweryContainer extends React.Component{
         return(
 
             <div>
-                {this.props.breweries.map(brewery => <BreweryList key={brewery.id} brewery={brewery} />)}
-                {/* <ul>{this.state.breweries.map((brewery) => <li>{brewery.name}</li> )}
-                </ul> */}
+          {/* <BreweryList breweriesArray={this.state.breweries}/> */}
+              {this.state.breweries.map(brewery => <BreweryList key={brewery.id} brewery={brewery} />)}
             </div>
         )
     }
