@@ -1,6 +1,6 @@
 import React from 'react'
 
-class Brewery extends React.Component{
+export default class Brewery extends React.Component{
 
     render(){
         return( 
@@ -10,7 +10,7 @@ class Brewery extends React.Component{
                 {this.props.brewery.name}
               </a>
               <div className="meta">
-                <span className="date">{this.props.brewery.address}</span>
+                {/* <span className="date">{this.props.brewery.address}</span> */}
               </div>
               <div className="description">
               </div>
