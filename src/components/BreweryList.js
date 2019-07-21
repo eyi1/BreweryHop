@@ -10,8 +10,6 @@ import { Link } from 'react-router-dom';
 // import Map from './components/Map.js'
 // import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
  
-
-
 export default class BreweryList extends React.Component {
 
 
@@ -21,16 +19,7 @@ export default class BreweryList extends React.Component {
        <div>
             {this.props.breweriesArray.map(brewery => <Brewery key={brewery.id} brewery={brewery} onButtonClick={this.props.onButtonClick} />)}
             {/* className="ui primary button" */}
-            {/* <ButtonToolbar>
-                <Button variant="outline-light" onClick={this.onButtonClick}>{this.props.brewery.name}</Button>
-                {this.state.showComponent ?
-                  <Brewery brewery={this.props.brewery}/> :
-               null
-               }
-
-</ButtonToolbar> */}
             
-
           {/* {this.props.brewery.name} */}
           {/* {this.props.brewery.type}
           {this.props.brewery.street}
@@ -39,7 +28,7 @@ export default class BreweryList extends React.Component {
           {this.props.brewery.postal_code}
           <Button variant="outline-dark" href={this.props.brewery.website_url}>Visit Page</Button>
            */}
-            
+
             
        
             {/* <Link to="/brewery">{this.props.brewery.name}</Link> */}
