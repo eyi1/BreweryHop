@@ -3,19 +3,6 @@ import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 import { Button, ButtonToolbar } from 'react-bootstrap';
 
 class Brewery extends React.Component{
-  // constructor(props){
-  //   super(props)
-  //   this.state = {
-  //     showComponent: false,
-  //   };
-  //   this.onButtonClick = this.onButtonClick.bind(this);
-  // }
-
-  // onButtonClick = () => {
-  //   this.setState({
-  //     showComponent: true,
-  //   });
-  // }
 
     render(){
         return( 
