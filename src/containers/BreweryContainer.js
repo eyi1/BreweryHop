@@ -8,10 +8,19 @@ export default class BreweryContainer extends React.Component{
     constructor(){
         super();
         this.state = {
-            breweries: []
+            breweries: [],
+            showComponent: false
           }
+        
+        this.onButtonClick = this.onButtonClick.bind(this);
     }
 
+    onButtonClick = (brewery) => {
+      console.log(brewery)
+      this.setState({
+        showComponent: true,
+      });
+    }
 
   componentDidMount(){
     const url = `${API_URL}`;
@@ -29,8 +38,11 @@ export default class BreweryContainer extends React.Component{
         return(
 
             <div>
-          {/* <BreweryList breweriesArray={this.state.breweries}/> */}
-              {this.state.breweries.map(brewery => <BreweryList key={brewery.id} brewery={brewery} />)}
+              <BreweryList 
+                breweriesArray={this.state.breweries} 
+                onButtonClick={this.onButtonClick}            
+              />
+              {/* {this.state.breweries.map(brewery => <BreweryList key={brewery.id} brewery={brewery} />)} */}
             </div>
         )
     }
