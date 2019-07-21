@@ -8,10 +8,6 @@ class Brewery extends React.Component{
         return( 
           <div>
             <Button variant="outline-dark" onClick={() => this.props.onButtonClick(this.props.brewery)}>{this.props.brewery.name}</Button>
-            {/* {this.state.showComponent ?
-                  <Map brewery={this.props.brewery}/> :
-               null
-            } */}
           
           </div>
       //     <Map google={this.props.google} zoom={14}
