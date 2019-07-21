@@ -2,6 +2,8 @@ import React from 'react';
 //import logo from './logo.svg';
 import './App.css';
 import BreweryContainer from './containers/BreweryContainer'
+import Brewery from './components/Brewery'
+import { Route } from 'react-router-dom';
 //import axios from 'axios';
 //const API_URL = 'https://api.openbrewerydb.org/breweries';
 
@@ -43,6 +45,9 @@ class App extends React.Component {
           Welcome to BreweryHop: 
           Planning a visit to NYC? Check out some of the best breweries here! 
         </header> */}
+        <header>
+            {/* <Route exact path="/brewery" component={Brewery} />  */}
+        </header>
 
           <BreweryContainer />
 
