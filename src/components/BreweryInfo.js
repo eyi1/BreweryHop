@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
 import GoogleMapReact from 'google-map-react'
-//const AnyReactComponent = ({ text }) => <div>{ text }</div>;
 import Modal from 'react-bootstrap/Modal'
 import { Button, ButtonToolbar } from 'react-bootstrap';
-import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
-//import Location from 'components/Location'
-//import GoogleMapReact from 'google-map-react';
-
+//import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+//const Marker = ({ text }) => <div>{text}</div>;
+import Marker from './Marker'
 
 export default class BreweryInfo extends Component {
   constructor(props){
@@ -32,24 +30,15 @@ static defaultProps = {
       lat: 40.678178,
       lng: -73.944158
     },
-    zoom: 13
+    zoom: 11
   };
 
 render() {
-  console.log(this.state.brewery)
+  console.log(this.state.brewery.latitude)
   let close = () => this.setState({ show: false});
 
     return (
        <div className='google-map'>
-       {/* <GoogleMapReact
-          defaultCenter={ this.props.center }
-          defaultZoom={ this.props.zoom }>
-          <AnyReactComponent
-            lat={ 40.7473310 }
-            lng={ -73.8517440 }
-            text={ "Where's Waldo?" }
-          />
-        </GoogleMapReact> */}
 
             <Modal
               show={this.state.show}//true
@@ -62,26 +51,26 @@ render() {
                 <Modal.Title id="contained-modal-title">{this.state.brewery.name}</Modal.Title>
               </Modal.Header>
               <Modal.Body>     
-              {this.props.brewery.street}
-              {this.props.brewery.city}
-              {this.props.brewery.state}
-              {this.props.brewery.postal_code}
+              {this.state.brewery.street}
+              {this.state.brewery.city}
+              {this.state.brewery.state}
+              {this.state.brewery.postal_code}
 
               <div style={{ height: '100vh', width: '100%' }}>
               <GoogleMapReact google={this.props.google} 
-            //   style={{width: '100%', height: '100%', position: 'relative'}}
-            //   className="map"
-            //   zoom={14}
-              bootstrapURLKeys={{ key: "AIzaSyCbzOSFbRLTDIQ8mVJ0LEiurXh6qL_4C-o" }}
+                bootstrapURLKeys={{ key: "AIzaSyCbzOSFbRLTDIQ8mVJ0LEiurXh6qL_4C-o" }}
                 defaultCenter={this.props.center}
                 defaultZoom={this.props.zoom}
+            
                 >
-                {/* <Marker
-                key={place.id}
-                text={place.name}
-                lat={place.geometry.location.lat}
-                lng={place.geometry.location.lng}
-              /> */}
+                <Marker
+                // key={this.props.brewery.id}
+                lat={this.state.brewery.latitude}
+                lng={this.state.brewery.longitude}      
+                text={this.state.brewery.name}     
+                name={this.state.brewery.name} 
+                color="red"   
+              />
               </GoogleMapReact>
             </div>
 
