@@ -2,6 +2,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # BreweryHop
 
+A simple React JS application that displays a list of local breweries in Chicago, IL using OpenBreweryDB​ API 
+(https://www.openbrewerydb.org/)
+
 Demo: https://breweryhop.herokuapp.com/
 
 ## Table of Contents
