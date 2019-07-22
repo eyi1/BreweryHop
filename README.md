@@ -8,7 +8,6 @@ Demo: https://breweryhop.herokuapp.com/
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
-* [Status](#status)
 
 ## General info
 This project requires npm install. 
