@@ -11,9 +11,9 @@ class App extends React.Component {
         <header className="App-header">
           <Jumbotron fluid>
             <Container>
-              <h1> <i style={{ position: 'relative'}} class="beer icon"></i>Welcome to BreweryHop</h1>
+              <h1> <i style={{ position: 'relative'}} class="beer icon"></i>BreweryHop</h1>
               <p>
-                We provide the best local breweries in Brooklyn, NY
+                Best Breweries in Chicago, IL
               </p>
             </Container>
           </Jumbotron>
