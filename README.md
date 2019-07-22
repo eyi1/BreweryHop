@@ -38,7 +38,3 @@ You will also see any lint errors in the console.
 ## Future Revisions
 
 Unit Tests
-
-## License
-
-The gem is available as open source under the terms of the MIT License.
