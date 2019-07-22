@@ -2,14 +2,33 @@
   text-align: center;
 }
 
+.jumbotron{
+  background-image: url(./images/plain-off-white-background-3.png);
+  background-color: rgb(44, 62, 80);
+  height: 210px;
+} 
+
+.jumbotron h1{
+  color: rgb(209, 80, 42);
+  font-size: 47px;
+  /* height: 100px; */
+  height: 70px;
+}
+
+.jumbotron p{
+  color: rgb(224, 114, 81);
+  font-size: 17px;
+}
+
 .App-header {
+  background-image: url(./images/infographic-brewing.png);
   background-color: #ffffff;
   padding-top: 10px;
-  /* min-height: 10vh; */
-  /* display: flex;
+  min-height: 5em;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; */
+  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: rgb(99, 98, 98);
 }
