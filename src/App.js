@@ -1,30 +1,26 @@
 import React from 'react';
 import './App.css';
 import BreweryContainer from './containers/BreweryContainer'
+import { Jumbotron, Container } from 'react-bootstrap'
 
 class App extends React.Component {
 
   render(){
     return (
       <div className="App">
-        {/* <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-          </a>
-          //jumbotron 
-          Click here to begin...
-          Welcome to BreweryHop: 
-          Planning a visit to NYC? Check out some of the best breweries here! 
-        </header> */}
+        <header className="App-header">
+          <Jumbotron fluid>
+            <Container>
+              <h1> <i style={{ position: 'relative'}} class="beer icon"></i>Welcome to BreweryHop</h1>
+              <p>
+                We provide the best local breweries in Brooklyn, NY
+              </p>
+            </Container>
+          </Jumbotron>
+        </header>
+        <body>
           <BreweryContainer />
+        </body>
       </div>
       
     );
