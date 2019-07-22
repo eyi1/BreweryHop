@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import BreweryList from '../components/BreweryList';
 import BreweryInfo from '../components/BreweryInfo'
-const API_URL = 'https://api.openbrewerydb.org/breweries?by_city=Brooklyn';
+const API_URL = 'https://api.openbrewerydb.org/breweries?by_city=Chicago';
 
 
 export default class BreweryContainer extends React.Component{
@@ -50,14 +50,11 @@ export default class BreweryContainer extends React.Component{
               
               {this.state.showComponent ?
                 <BreweryInfo 
-                // breweriesArray={this.state.breweries}
                 brewery={this.state.brewery}
                 modal={this.state.showComponent} 
-                //onHide={close}
                  /> :
                null
                }
-              {/* {this.state.breweries.map(brewery => <BreweryList key={brewery.id} brewery={brewery} />)} */}
             </div>
         )
     }
