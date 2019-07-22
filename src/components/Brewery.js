@@ -1,15 +1,15 @@
 import React from 'react'
 import { Button } from 'react-bootstrap';
-import { Card } from 'semantic-ui-react'
+import { Card, Label } from 'semantic-ui-react'
 
 export default class Brewery extends React.Component{
 
     render(){
         return( 
-          <div className='ui-cards'>
+          <div className='ui-cards' style={{display: 'inline-block', padding: '1em', margin: '1em'}}>
             <br />
             <Card.Group>
-              <Card style={{ width: '30rem' }}>
+              <Card style={{ width: '21rem' }} >
                 <Card.Content>
                   <Card.Header as='a'>{this.props.brewery.name}</Card.Header>
                   <Card.Meta>
@@ -28,7 +28,10 @@ export default class Brewery extends React.Component{
                     <Button variant="outline-dark" onClick={() => this.props.onButtonClick(this.props.brewery)}> 
                        <i style={{ position: 'relative'}} class="map pin icon"></i>
                           Map
-                    </Button>       
+                    </Button>  
+                    <span> </span>  
+                      <i style={{ position: 'relative'}} class="arrows alternate horizontal icon"></i>
+                    <span> </span>   
                     <Button variant="outline-dark" href={this.props.brewery.website_url}>
                       <i style={{ position: 'relative'}} class="home icon"></i>
                          Visit Page
