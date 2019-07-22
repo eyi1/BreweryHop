@@ -21,8 +21,8 @@ export default class BreweryInfo extends Component {
 
   static defaultProps = {
     center: {
-      lat: 40.678178,
-      lng: -73.944158
+      lat: 41.85,
+      lng: -87.65
     },
     zoom: 11
   };
