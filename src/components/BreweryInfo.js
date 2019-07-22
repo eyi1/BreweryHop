@@ -21,10 +21,10 @@ export default class BreweryInfo extends Component {
 
   static defaultProps = {
     center: {
-      lat: 41.85,
-      lng: -87.65
+      lat: 41.8781,
+      lng: -87.6298
     },
-    zoom: 11
+    zoom: 10
   };
 
   render() {
@@ -38,7 +38,7 @@ export default class BreweryInfo extends Component {
           onHide={close}
           container={this}
           aria-labelledby="contained-modal-title"
-          size='xl'
+          size='l'
         >
           <Modal.Header closeButton>
             <Modal.Title id="contained-modal-title">{this.state.brewery.name}</Modal.Title>
@@ -53,7 +53,7 @@ export default class BreweryInfo extends Component {
               {this.props.brewery.postal_code}  
             </p>
 
-            <div style={{ height: '100vh', width: '100%' }}>
+            <div style={{ height: '70vh', width: '100%' }}>
               <GoogleMapReact google={this.props.google} 
                 bootstrapURLKeys={{ key: "AIzaSyCbzOSFbRLTDIQ8mVJ0LEiurXh6qL_4C-o" }}
                 defaultCenter={this.props.center}
