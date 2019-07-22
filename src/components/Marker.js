@@ -3,7 +3,7 @@ import './Marker.css';
 
 const Marker = (props) => {
     const { color, name } = props;
-    console.log(props)
+    // console.log(props)
     return (
       <div className="marker"
         style={{ backgroundColor: color}}
