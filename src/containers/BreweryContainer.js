@@ -58,6 +58,4 @@ export default class BreweryContainer extends React.Component{
             </div>
         )
     }
-
-
 }
