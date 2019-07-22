@@ -17,22 +17,7 @@ export default class BreweryList extends React.Component {
       return (
        // <div className="ui cards">
        <div>
-            {this.props.breweriesArray.map(brewery => <Brewery key={brewery.id} brewery={brewery} onButtonClick={this.props.onButtonClick} />)}
-            {/* className="ui primary button" */}
-            
-          {/* {this.props.brewery.name} */}
-          {/* {this.props.brewery.type}
-          {this.props.brewery.street}
-          {this.props.brewery.city}
-          {this.props.brewery.state}
-          {this.props.brewery.postal_code}
-          <Button variant="outline-dark" href={this.props.brewery.website_url}>Visit Page</Button>
-           */}
-
-            
-       
-            {/* <Link to="/brewery">{this.props.brewery.name}</Link> */}
-            
+            {this.props.breweriesArray.map(brewery => <Brewery key={brewery.id} brewery={brewery} onButtonClick={this.props.onButtonClick} />)} 
         </div>
       )
     }
