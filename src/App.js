@@ -9,7 +9,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          <Jumbotron fluid>
+          
+          <Jumbotron>
             <Container>
               <h1> <i style={{ position: 'relative'}} class="beer icon"></i>BreweryHop</h1>
               <p>
@@ -17,7 +18,9 @@ class App extends React.Component {
               </p>
             </Container>
           </Jumbotron>
+
         </header>
+        
         <body>
           <BreweryContainer />
         </body>
