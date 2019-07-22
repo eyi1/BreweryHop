@@ -1,21 +1,44 @@
 import React from 'react'
-import { Button, ButtonToolbar } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
+import { Card } from 'semantic-ui-react'
 
 export default class Brewery extends React.Component{
 
     render(){
         return( 
-          <div>
-            <Button variant="outline-dark" onClick={() => this.props.onButtonClick(this.props.brewery)}>{this.props.brewery.name}</Button>
-           
-          {this.props.brewery.type}
-          {this.props.brewery.street}
-          {this.props.brewery.city}
-          {this.props.brewery.state}
-          {this.props.brewery.postal_code} 
-          <Button variant="outline-dark" href={this.props.brewery.website_url}>Visit Page</Button>
-          </div>
+          <div className='ui-cards'>
+            <br />
+            <Card.Group>
+              <Card style={{ width: '30rem' }}>
+                <Card.Content>
+                  <Card.Header as='a'>{this.props.brewery.name}</Card.Header>
+                  <Card.Meta>
+                    <i style={{ position: 'relative'}} class="bar icon"></i>
+                    <span className='brewery_type'>{this.props.brewery.brewery_type}</span>
+                  </Card.Meta>
+                  <Card.Description>
+                            {this.props.brewery.street} <br />
+                            {this.props.brewery.city}, <span> </span>
+                            {this.props.brewery.state} <span> </span>
+                            {this.props.brewery.postal_code}  
+                  </Card.Description>
+                </Card.Content>
+                <Card.Content>
+                  <Card.Content extra>  
+                    <Button variant="outline-dark" onClick={() => this.props.onButtonClick(this.props.brewery)}> 
+                       <i style={{ position: 'relative'}} class="map pin icon"></i>
+                          Map
+                    </Button>       
+                    <Button variant="outline-dark" href={this.props.brewery.website_url}>
+                      <i style={{ position: 'relative'}} class="home icon"></i>
+                         Visit Page
+                    </Button>
+                  </Card.Content>
+                </Card.Content>
+              </Card>
+            </Card.Group>
 
+          </div>
         )   
     }
 }
