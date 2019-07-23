@@ -14,7 +14,7 @@ class App extends React.Component {
             <Container>
               <h1> <i style={{ position: 'relative'}} class="beer icon"></i>BreweryHop</h1>
               <p>
-                Best Breweries in Chicago, IL
+                The Best Breweries in Chicago, IL
               </p>
             </Container>
           </Jumbotron>
