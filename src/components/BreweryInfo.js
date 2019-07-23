@@ -63,7 +63,6 @@ export default class BreweryInfo extends Component {
                   lat={this.state.brewery.latitude}
                   lng={this.state.brewery.longitude}      
                   text={this.state.brewery.name}     
-                  name={this.state.brewery.name} 
                   color="red"   
                 />
               </GoogleMapReact>
