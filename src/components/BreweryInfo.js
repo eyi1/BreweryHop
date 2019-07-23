@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import GoogleMapReact from 'google-map-react'
 import Modal from 'react-bootstrap/Modal'
-import { Button, ButtonToolbar } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import Marker from './Marker'
 
 export default class BreweryInfo extends Component {
