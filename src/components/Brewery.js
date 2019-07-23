@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from 'react-bootstrap';
-import { Card, Label } from 'semantic-ui-react'
+import { Card } from 'semantic-ui-react'
 
 export default class Brewery extends React.Component{
 
